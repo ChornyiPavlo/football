@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Place - Hobiler, eğlence, boş zaman, Pin-up</title>
+    <meta name="description"
+          content="Football Place: Aktif hobiler ve eğlenceler için mükemmel mekan. Pin-up tarzı futbol deneyimi.">
+    <meta name="keywords" content="Football Place, pin-up, hobi, eğlence, dosya, aktif hobiler">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #800000;
+        color: white;
+      }
+
+      .container_footballplace {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header_footballplace {
+        background-color: #A52A2A;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .menu_footballplace ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .menu_footballplace ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      .menu_footballplace ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .hero_footballplace {
+        background-image: url('img/Football_Place_A_Fun_and_Engaging_Foot_3.jpg');
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        position: relative;
+      }
+
+      .hero-content_footballplace {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        color: white;
+      }
+
+      .hero-content_footballplace h1 {
+        font-size: 2.5em;
+      }
+
+      .hero-content_footballplace p {
+        margin: 10px 0;
+      }
+
+      .btn_footballplace {
+        background-color: #A52A2A;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .about_footballplace, .advantages_footballplace, .mission_footballplace, .why-choose-us_footballplace, .photo-slider_footballplace {
+        padding: 20px 0;
+        background-color: #A52A2A;
+        text-align: center;
+      }
+
+      .about-content_footballplace, .mission-content_footballplace {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .about-content_footballplace p,
+      .mission-content_footballplace p {
+        max-width: 600px;
+        margin-right: 20px;
+      }
+
+      .advantages-content_footballplace {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .advantage_footballplace {
+        background: #800000;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 300px;
+      }
+
+      .advantage_footballplace img {
+        width: 100%;
+      }
+
+      .photo-slider_footballplace {
+        display: flex;
+        overflow: auto;
+      }
+
+      .photo-slider_footballplace img {
+        width: 300px;
+        margin: 5px;
+      }
+
+      footer_footballplace {
+        background-color: #A52A2A;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      
+      @media (max-width: 768px) {
+        .about-content_footballplace, .mission-content_footballplace {
+          flex-direction: column;
+          text-align: left;
+        }
+
+        .about-content_footballplace img, .mission-content_footballplace img {
+          max-width: 100%;
+          margin-top: 20px;
+        }
+
+        .advantages-content_footballplace {
+          flex-direction: column;
+        }
+
+        .advantage_footballplace {
+          margin: 10px 0;
+        }
+        .photo-slider_footballplace img {
+          width: 90%;
+          margin: 0px;
+        }
+      }
+
+      .container_footballplace {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 0 20px; 
+      }
+
+      .logo {
+        font-size: 1.8em; 
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu_footballplace ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex; 
+      }
+
+      .menu_footballplace ul li {
+        margin: 0 15px; 
+      }
+
+      .menu_footballplace ul li a {
+        color: white; 
+        text-decoration: none;
+      }
+
+      .menu {
+        display: flex;
+      }
+
+      .burger-menu {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        .menu_footballplace ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .menu_footballplace ul li {
+          margin: 10px 0;
+        }
+        .header_footballplace {
+          padding: 20px;
+        }
+        .menu {
+          display: flex;
+          flex-direction: column;
+          height: 0;
+          overflow: hidden;
+          transition: height 0.3s ease;
+          width: 100%;
+          background-color: #A52A2A;
+          position: absolute;
+          top: 60px;
+          left: 0;
+        }
+
+        .menu ul {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .menu ul li {
+          list-style: none;
+          padding: 15px;
+          text-align: center;
+          border-bottom: 1px solid #fff;
+          width: 100%;
+        }
+
+        .burger-menu {
+          display: block;
+        }
+
+        .menu-open {
+          height: auto;
+          z-index: 1;
+        }
+      }
+
+      .photo-slider_footballplace {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slides img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        min-width: 100%; 
+      }
+
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        color: #800000;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        z-index: 1;
+      }
+
+      button.prev {
+        left: 10px;
+      }
+
+      button.next {
+        right: 10px;
+      }
+
+      .slides img {
+        pointer-events: none;
+      }
+    </style>
+</head>
+<body>
+
+<header class="header_footballplace">
+    <div class="container_footballplace">
+        <a href="index.html" class="logo">Football Place</a>
+        <span class="burger-menu">&#9776;</span>
+        <nav class="menu_footballplace menu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#about">Hakkımızda</a></li>
+                <li><a href="index.html#service">Hizmetler</a></li>
+                <li><a href="index.html#contact">İletişim</a></li>
+                <li><a href="policy.html">Gizlilik Politikası</a></li>
+                <li><a href="terms.html">Şartlar ve koşullar</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section class="advantages_footballplace">
+    <h1>Şartları ve Koşulları</h1>
+    <p>pinaz@footballplace.xyz Kullanım Şartları ve Koşulları</p>
+    <p>Bu kullanım şartları ve koşulları (“Koşullar”), pinaz@footballplace.xyz web sitesini (“Site”) ziyaret eden herkes (“Kullanıcı”) için geçerlidir.</p>
+    <h3>Kabul Edilme</h3>
+    <p>Siteyi ziyaret ederek veya kullanarak, Kullanıcı bu Koşulları kabul etmiş olur. Kullanıcı bu Koşullara uymadığı takdirde Siteyi kullanmamalıdır.</p>
+    <h3>Kullanım Hakları ve Sorumluluklar</h3>
+    <li>a. Kullanıcı, Siteyi yalnızca yasal amaçlar için kullanabilir.</li>
+    <li>b. Kullanıcı, Site üzerinde başkalarının haklarına zarar verecek, huzursuzluk çıkaracak veya yasa dışı faaliyetlerde bulunacak herhangi bir eylemden kaçınmalıdır.</li>
+    <h3>Gizlilik Politikas</h3>
+    <p>Siteye erişim ve kullanım, Kullanıcının gizlilik politikamızı kabul ettiği anlamına gelir. Daha fazla bilgi için lütfen gizlilik politikamızı inceleyiniz.</p>
+    <h3>Telif Hakkı ve İçerik</h3>
+    <li>a. Site üzerindeki tüm içerik ve materyaller telif hakkına tabidir. İzinsiz kullanımı yasaktır.</li>
+    <li>b. Kullanıcılar, Site üzerinde paylaştıkları içeriklerin telif haklarına sahip olduğunu beyan ederler. Site yönetimi, telif hakkı ihlalleri konusunda gereken adımları atma hakkını saklı tutar.</li>
+    <h3>Hizmet Değişiklikleri</h3>
+    <p>Site yönetimi, Siteyi herhangi bir zamanda önceden haber vermeden değiştirme veya sonlandırma hakkını saklı tutar.</p>
+    <h3>Sorumluluk Reddi</h3>
+    <p>Site yönetimi, Site üzerinde sunulan içeriklerin doğruluğu, güncelliği veya eksiksizliği konusunda herhangi bir garanti vermez. Kullanıcılar Siteyi kendi sorumlulukları altında kullanır.</p>
+    <h3>Bağlantılar</h3>
+    <p>Site, diğer web sitelerine bağlantılar içerebilir. Bu bağlantılar yalnızca kullanıcıların kolaylık sağlaması içindir. Bağlantı verilen sitelerin içeriği üzerinde kontrolümüz yoktur ve bu sitelerin içeriği veya kullanımıyla ilgili sorumluluk kabul etmeyiz.</p>
+    <h3>Uygulanabilir Kanunlar</h3>
+    <p>Bu Koşullar ve Site üzerindeki herhangi bir anlaşmazlık, Ukrayna yasalarına tabi olacaktır.</p>
+    </div>
+</section>
+
+<footer class="footer_footballplace">
+    <div class="container_footballplace">
+        <p>&copy; 2023 Football Place. Tüm hakları saklıdır. | Olimpiya Stadionu, Böyükşor gölünün yanı, Baku,
+            Azerbaijan | +994505554440 | pinaz@footballplace.xyz</p>
+    </div>
+</footer>
+<script>
+
+
+    let currentSlide = 0;
+
+    function showSlide(slideIndex) {
+        const slides = document.querySelectorAll('.slides img');
+        if (slideIndex >= slides.length) {
+            currentSlide = 0;
+        } else if (slideIndex < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = slideIndex;
+        }
+        const offset = -currentSlide * 100;
+        document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+    }
+
+    function moveSlide(n) {
+        showSlide(currentSlide + n);
+    }
+
+
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+
+
+</script>
+<script>
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('menu-open');
+    });
+</script>
+</body>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Football Place - Pin Up",
+        "url": "",
+        "logo": "/favicon/favicon.ico"
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WPHeader",
+        "headline": "Football Place - Pin Up",
+        "description": "Football Place: Aktif hobiler ve eğlenceler için mükemmel mekan. Pin-up tarzı futbol deneyimi.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Football Place - Pin Up",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "/favicon/favicon.ico"
+            }
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Football Place - Pin Up",
+        "description": "Football Place: Aktif hobiler ve eğlenceler için mükemmel mekan. Pin-up tarzı futbol deneyimi.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Football Place - Pin Up"
+        },
+        "license": "A license document that applies to this content, typically indicated by URL"
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SiteNavigationElement",
+        "name": "Main Navigation",
+        "url": "",
+        "hasPart": [
+            {
+                "@type": "WebPage",
+                "name": "Home",
+                "url": ""
+            },
+            {
+                "@type": "WebPage",
+                "name": "Policy",
+                "url": "/policy.html"
+            },
+            {
+                "@type": "WebPage",
+                "name": "Terms of Conditions",
+                "url": "/terms.html"
+            }
+        ]
+    }
+</script>
+</html>

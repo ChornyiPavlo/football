@@ -1,0 +1,7 @@
+User-Agent: *
+
+Disallow:
+
+
+Sitemap: http://pinaz@footballplace.xyz/sitemap.xml
+Host: pinaz@footballplace.xyz
